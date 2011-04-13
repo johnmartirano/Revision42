@@ -1,0 +1,232 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+<style type="text/css"> 
+
+* { margin: 0; padding 0; }
+html { background: #000; }
+
+body
+  {
+  font: 11px "Lucida Grande", Helvetica, Arial, Sans-Serif; 
+  color: #262626;
+  }
+
+hr 
+  {
+  width: 100%;
+  height: 8px;
+  color: #262626;
+  background-color: #262626;
+  }
+
+/*outerwrap sets fixed image to scale to fill window, with a min-width*/
+img#outerwrap 
+  {
+  width: 100%;
+  min-width: 775px;
+  min-height: 775px;
+  position: fixed;
+  }
+
+div#header
+  {
+  background-color: #262626;
+  position: relative;
+  margin: 0px auto 0px auto;
+  padding: 5px;
+  width: 100%;
+  height: 50px;
+
+  border:0px;
+  }
+
+#header_logo_wrap 
+  {
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 0px;
+  }
+#header_logo
+  {
+  width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+  }
+
+.logo_revision
+  {
+  /*color: #E9BA26;*/
+  top: 10px;
+  color: #9ac7e6; /*lighter blue*/
+  color: #5299cd; /*light blue*/
+  font: 42px "Helvetica", Lucida Grande, Arial, Sans-Serif;
+  font-weight: 900;
+  }
+.logo_42
+  {
+  color: #ffd55c; /*brighter yellow*/
+  color: #ffb85c; /*yellow*/
+  color: #6164d5; /*magenta*/
+  }
+
+/*wrap sets up the minimum margins for the main body of the page*/
+#wrap 
+  {
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 0px;
+  }
+
+/*innerwrap sets up margins auto to scale*/
+#innerwrap 
+  {
+  margin-left: auto;
+  margin-right: auto;
+  }
+
+div#main
+  {
+  position: relative;
+  top: 5px;
+  margin: 0px auto 6px auto;
+  width: 636px;
+  height: 550px;
+  }
+
+div#page
+  {
+  background-color: white;
+  float: left;
+  padding: 5px;
+  width: 470px;
+  height: 550px;
+
+  border:0px;
+  border-radius:8px;
+  -moz-border-radius:8px; /* Firefox 3.6 and earlier */
+  -webkit-border-radius:8px; /* Safari */
+  }
+
+div#sidebar
+  {
+  float: left;
+  background-color: white;
+  background-color: #6164d5; /*magenta*/
+  position: relative;
+  top: 0px;
+  right: 0px;
+  margin: 0px 0px 6px 6px;
+  padding: 5px;
+  width: 140px;
+  min-height: 120px;
+
+  border:0px;
+  border-radius:8px;
+  -moz-border-radius:8px; /* Firefox 3.6 and earlier */
+  -webkit-border-radius:8px; /* Safari */
+  }
+
+div#sidebar2
+  {
+  float: left;
+  background-color: white;
+  position: relative;
+  top: 0px;
+  right: 0px;
+  margin: 0px auto 12px 6px;
+  padding: 5px;
+  width: 140px;
+  min-height: 120px;
+
+  border:0px;
+  border-radius:8px;
+  -moz-border-radius:8px; /* Firefox 3.6 and earlier */
+  -webkit-border-radius:8px; /* Safari */
+  }
+
+div#footer_wrap
+  {
+  width: 640px;
+  height: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  }
+
+div#footer
+  {
+  float: left;
+  background-color: #262626;
+  opacity: .82;
+  filter:alpha(opacity=82);
+  position: relative;
+  top: 18px;
+  margin: 0px auto 12px auto;
+  padding: 5px;
+  width: 470px;
+  height: 50px;
+
+  border:0px;
+  border-radius:8px;
+  -moz-border-radius:8px; /* Firefox 3.6 and earlier */
+  -webkit-border-radius:8px; /* Safari */
+  }
+
+
+</style>
+</head>
+
+<body>
+
+<img id='outerwrap' src='images/cityscape.jpg' />
+
+<div id='header'> 
+<div id='header_logo_wrap'>
+<div id='header_logo'>
+<span class='logo_revision'>Revision</span><span class='logo_revision logo_42'>42</span> 
+</div>
+</div>
+</div>
+
+<div id='wrap'>
+
+<div id='innerwrap'>
+
+<div id='main'>
+<div id='page'>
+<br>
+<hr>
+    
+<h2>Getting Started</h2> <p>Our new project will be called <code>np</code>.</p> <pre><code> mkdir np cd np [andy@airy-un ~/Sites/np] </code></pre> <h2>Initialise Git repo, create .gitignore and make first commit</h2> <pre><code>  git init
+Initialized empty Git repository in /Users/andy/Sites/np/.git/
+[andy@airy-un ~/Sites/np] (master) 
+vi .gitignore
+.bundle/
+.rvmrc
+</code></pre> <p><strong>note:</strong> Here I am calling the editor vi, and showing what the file I'm editing looks like after I've finished editing and saving. The contents of the file will be useful when we add rvm and bundler</p> 
+<pre><code> ls -la
+total 8
+drwxr-xr-x   4 andy  staff   136 14 Nov 11:06 ./
+drwxr-xr-x  45 andy  staff  1530 14 Nov 11:05 ../
+drwxr-xr-x  12 andy  staff   408 14 Nov 11:07 .git/
+-rw-r--r--   1 andy  staff    16 14 Nov 11:06 .gitignore
+</code></pre> <p>Recently I've got into a nice groove using these tools on new ruby projects. I think of the following as a Koan, which I've practiced quite alot recently and which gives a nice environment to start working in.</p> <p>The following is the a reasonably verbose version of this Koan.</p> 
+
+</div>
+
+<div id='sidebar'> </div>
+<div id='sidebar2'> March 3, 2011<br> Using ruby mixins for dependency injection.  </div>
+</div>
+
+<div id='footer_wrap'> 
+<div id='footer'> </div>
+</div>
+
+
+
+</div>
+</div>
+
+</body>
+</html>
