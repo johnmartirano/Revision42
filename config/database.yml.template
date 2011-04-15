@@ -1,0 +1,21 @@
+defaults: &defaults
+  adapter: mysql2
+  username: 'user'
+  password: 'xxxx'
+  pool: 5
+  timeout: 5000
+
+development:
+  <<: *defaults
+  database: revision42_dev
+
+# Warning: The database defined as "test" will be erased and
+# re-generated from your development database when you run "rake".
+# Do not set this db to the same as development or production.
+test:
+  <<: *defaults
+  database: revision42_test
+
+production:
+  <<: *defaults
+  database: revision42
