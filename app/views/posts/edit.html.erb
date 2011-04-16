@@ -1,0 +1,18 @@
+<% content_for :head do %>
+<% end %>
+
+
+<% content_for :page_body do %>
+
+  <h1>Editing post</h1>
+
+  <%= render 'form' %>
+  
+  <%= link_to 'Show', @post %> |
+  <%= link_to 'Back', posts_path %>
+
+<% end %>
+
+
+<% content_for :sidebar do %>
+<% end %>

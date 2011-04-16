@@ -1,43 +1,39 @@
-<div id='margin_wrap'>
-
-<div id='innerwrap'>
-
-<div id='main'>
-
-<div id='page_wrap'>
-<div id='page_header'>
-</div>
-<div id='page_body'>
-<br>
-<h2>Getting Started</h2> <p>Our new project will be called <code>np</code>.</p> <pre><code> mkdir np cd np [andy@airy-un ~/Sites/np] </code></pre> <h2>Initialise Git repo, create .gitignore and make first commit</h2> <pre><code>  git init
-Initialized empty Git repository in /Users/andy/Sites/np/.git/
-[andy@airy-un ~/Sites/np] (master) 
-vi .gitignore
-.bundle/
-.rvmrc
-</code></pre> <p><strong>note:</strong> Here I am calling the editor vi, and showing what the file I'm editing looks like after I've finished editing and saving. The contents of the file will be useful when we add rvm and bundler</p> 
-<pre><code> ls -la
-total 8
-drwxr-xr-x   4 andy  staff   136 14 Nov 11:06 ./
-drwxr-xr-x  45 andy  staff  1530 14 Nov 11:05 ../
-drwxr-xr-x  12 andy  staff   408 14 Nov 11:07 .git/
--rw-r--r--   1 andy  staff    16 14 Nov 11:06 .gitignore
-</code></pre> <p>Recently I've got into a nice groove using these tools on new ruby projects. I think of the following as a Koan, which I've practiced quite alot recently and which gives a nice environment to start working in.</p> <p>The following is the a reasonably verbose version of this Koan.</p> 
-
-</div>
-</div>
-
-<div id='sidebar'> 
-  <%= image_tag('/images/johnAR180.jpg', :id => 'jjm') %>
-</div>
-<div id='sidebar2'> March 3, 2011<br> Using ruby mixins for dependency injection.  </div>
-</div>
-
-<div id='footer_wrap'> 
-<div id='footer'> </div>
-</div>
+<% content_for :head do %>
+<% end %>
 
 
+<% content_for :page_body do %>
 
-</div>
-</div>
+  <h1>Listing posts</h1>
+
+  <table>
+    <tr>
+      <th>Title</th>
+      <th>Content</th>
+      <th>User</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  
+  <% @posts.each do |post| %>
+    <tr>
+      <td><%= post.title %></td>
+      <td><%= post.content %></td>
+      <td><%= post.user_id %></td>
+      <td><%= link_to 'Show', post %></td>
+      <td><%= link_to 'Edit', edit_post_path(post) %></td>
+      <td><%= link_to 'Destroy', post, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+  </table>
+  
+  <br />
+
+  <%= link_to 'New Post', new_post_path %>
+
+<% end %>
+
+
+<% content_for :sidebar do %>
+<% end %>

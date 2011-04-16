@@ -8,13 +8,8 @@ body
   color: #262626;
   }
 
-hr 
-  {
-  width: 100%;
-  height: 8px;
-  color: #262626;
-  background-color: #262626;
-  }
+A:link, A:visited, A:active { color: #6164d5; } /*magenta*/
+A:hover { color: #5299cd; } /*light blue*/
 
 /*outerwrap sets fixed image to scale to fill window, with a min-width*/
 img#outerwrap 
@@ -40,6 +35,7 @@ div#header
   padding-right: 40px;
   padding-top: 0px;
   }
+
 #header_logo
   {
   width: 640px;
@@ -145,6 +141,7 @@ div#page_body
   -moz-border-radius-bottomleft:8px; /* Firefox 3.6 and earlier */
   -webkit-border-bottom-left-radius:8px; /* Safari */
   }
+
 
 div#sidebar
   {

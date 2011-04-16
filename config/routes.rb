@@ -1,9 +1,23 @@
 Revision42::Application.routes.draw do
+  resources :posts
+
+  resources :users
+
   match "/johnmartirano" => "pages#johnmartirano"
 
-  get "posts/index"
-
-  get "posts/show"
+  resources :posts do
+    member do
+      get 'show'
+      get 'edit'
+      put 'update'
+      post 'create'
+      delete 'destroy'
+    end
+    collection do
+      get 'index'
+      get 'new'
+    end
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

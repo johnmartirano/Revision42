@@ -6,25 +6,63 @@
   <%= stylesheet_link_tag :all %>
   <%= javascript_include_tag :defaults %>
   <%= csrf_meta_tag %>
-  <!--link href="stylesheets/revision42.css" media="all" rel="stylesheet" type="text/css" /-->
+  <%= yield :head %>
 </head>
 
 <body>
+
+
+  <!--BACKGROUND IMAGE --------------------------------------------->
   <%= image_tag('/images/cityscape.jpg', :id => 'outerwrap') %>
 
+
+  <!--HEADER, LOGO --------------------------------------------->
   <div id='header'> 
     <div id='header_logo_wrap'>
       <div id='header_logo'>
         <span class='logo_revision'>Revision</span><span class='logo_revision logo_42'>42</span>
         <span id='nav_bar'> 
-          <%= link_to "blog", posts_index_path %> 
+          <%= link_to "blog", posts_path %> 
           / <%= link_to "johnmartirano", johnmartirano_path %> </span>
       </div>
     </div>
   </div>
 
 
-<%= yield %>
+  <!--PAGE BODY--------------------------------------------->
+  <div id='margin_wrap'>
+
+  <div id='innerwrap'>
+  
+  <div id='main'>
+  
+  <div id='page_wrap'>
+  <div id='page_header'>
+  </div>
+  <div id='page_body'>
+
+
+  <%= yield :page_body %>
+
+  
+  <!--SIDEBARS --------------------------------------------->
+  </div>
+  </div>
+  
+  <div id='sidebar'> 
+    <%= yield :sidebar %>
+  </div>
+  <div id='sidebar2'> March 3, 2011<br> Using ruby mixins for dependency injection.  </div>
+  </div>
+  
+  <div id='footer_wrap'> 
+  <div id='footer'> </div>
+  </div>
+
+  </div>
+  </div>
+
+
 
 </body>
 </html>
