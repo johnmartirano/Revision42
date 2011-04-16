@@ -1,15 +1,36 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <b>Username:</b>
-  <%= @user.username %>
-</p>
-
-<p>
-  <b>Email:</b>
-  <%= @user.email %>
-</p>
+<% content_for :head do %>
+<% end %>
 
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+<% content_for :page_title do %>
+  user administration
+<% end %>
+
+
+<% content_for :page_subtitle do %>
+<% end %>
+
+
+<% content_for :page_body do %>
+
+  <p id="notice"><%= notice %></p>
+
+  <p>
+    <b>Username:</b>
+    <%= @user.username %>
+  </p>
+
+  <p>
+    <b>Email:</b>
+    <%= @user.email %>
+  </p>
+
+
+  <%= link_to 'Edit', edit_user_path(@user) %> |
+  <%= link_to 'Back', users_path %>
+
+<% end %>
+
+
+<% content_for :sidebar do %>
+<% end %>

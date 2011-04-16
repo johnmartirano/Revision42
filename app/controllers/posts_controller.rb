@@ -13,7 +13,13 @@ class PostsController < ApplicationController
   # GET /posts/1
   # GET /posts/1.xml
   def show
-    @post = Post.find(params[:id])
+    if params[:id]
+      @post = Post.find(params[:id])
+    else  #root routed here
+      @post = Post.last
+    end
+
+    @username=@post.user.username
 
     respond_to do |format|
       format.html # show.html.erb
@@ -40,7 +46,7 @@ class PostsController < ApplicationController
   # POST /posts
   # POST /posts.xml
   def create
-    @post = Post.new(params[:post])
+    @post = current_user.posts.build(params[:post])
 
     respond_to do |format|
       if @post.save

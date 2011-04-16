@@ -1,6 +1,27 @@
-<h1>Editing user</h1>
+<% content_for :head do %>
+<% end %>
 
-<%= render 'form' %>
 
-<%= link_to 'Show', @user %> |
-<%= link_to 'Back', users_path %>
+<% content_for :page_title do %>
+  user administration
+<% end %>
+
+
+<% content_for :page_subtitle do %>
+<% end %>
+
+
+<% content_for :page_body do %>
+
+  <h1> Editing user: <%= @user.username %> </h1>
+
+  <%= render 'form' %>
+
+  <%= link_to 'Show', @user %> |
+  <%= link_to 'Back', users_path %>
+
+<% end %>
+
+
+<% content_for :sidebar do %>
+<% end %>

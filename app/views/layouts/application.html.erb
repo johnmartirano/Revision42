@@ -22,7 +22,7 @@
       <div id='header_logo'>
         <span class='logo_revision'>Revision</span><span class='logo_revision logo_42'>42</span>
         <span id='nav_bar'> 
-          <%= link_to "blog", posts_path %> 
+          <%= link_to "blog", root_path %> 
           / <%= link_to "johnmartirano", johnmartirano_path %> </span>
       </div>
     </div>
@@ -36,32 +36,43 @@
   
   <div id='main'>
   
-  <div id='page_wrap'>
-  <div id='page_header'>
-  </div>
-  <div id='page_body'>
+    <div id='page_wrap'>
+      <div id='page_title_area'>
+        <span id='page_title'>
+          <%= yield :page_title %>
+        </span>
+        <br>
+        <span id='page_subtitle'>
+          <%= yield :page_subtitle %>
+        </span>
+      </div>
+    <div id='page_body'>
 
 
   <%= yield :page_body %>
 
   
-  <!--SIDEBARS --------------------------------------------->
   </div>
   </div>
+
   
+  <!--SIDEBARS --------------------------------------------->
   <div id='sidebar'> 
     <%= yield :sidebar %>
   </div>
+
   <div id='sidebar2'> March 3, 2011<br> Using ruby mixins for dependency injection.  </div>
   </div>
   
+
+  <!--FOOTER --------------------------------------------->
   <div id='footer_wrap'> 
   <div id='footer'> </div>
   </div>
 
-  </div>
-  </div>
 
+  </div>
+  </div>
 
 
 </body>

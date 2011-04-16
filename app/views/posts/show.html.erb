@@ -2,14 +2,19 @@
 <% end %>
 
 
+<% content_for :page_title do %>
+  <%= @post.title %>
+<% end %>
+
+
+<% content_for :page_subtitle do %>
+  -- published on <%= @post.created_at %> by <%= @username %>
+<% end %>
+
+
 <% content_for :page_body do %>
   <p id="notice"><%= notice %></p>
 
-  <p>
-    <b>Title:</b>
-    <%= @post.title %>
-  </p>
-  
   <p>
     <b>Content:</b>
     <%= @post.content %>
