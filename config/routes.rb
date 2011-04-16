@@ -1,4 +1,6 @@
 Revision42::Application.routes.draw do
+  match "/johnmartirano" => "pages#johnmartirano"
+
   get "posts/index"
 
   get "posts/show"
