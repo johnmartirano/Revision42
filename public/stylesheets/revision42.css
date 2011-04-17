@@ -88,7 +88,6 @@ div#main
   top: 8px;
   margin: 0px auto 8px auto;
   width: 640px;
-  height: 600px;/*30+5+5+550+5+5*/
   }
 
 /*page is main body content, no sidebars, no header, no footer */
@@ -100,9 +99,9 @@ div#page_wrap
 div#page_title_area
   {
   background-color: #262626;
-  width: 474;
-  height: 30px;
-  padding: 5px;
+  padding: 8px 8px 0px 8px;
+  width: 468;
+  height: 32px;
 
   border:0px;
   border-top-left-radius:8px;
@@ -123,6 +122,7 @@ span#page_title
   {
   font: 20px "Helvetica", Lucida Grande, Arial, Sans-Serif; 
   font-weight: 800;
+  line-height: 90%;
   color: #5299cd; /*light blue*/
   }
 
@@ -137,7 +137,7 @@ div#page_body
   {
   background-color: white;
   width: 474px;
-  height: 550px;
+  min-height: 350px;
   padding: 5px;
 
   border:0px;
@@ -159,7 +159,6 @@ div#page_body
 div#sidebar
   {
   float: left;
-  background-color: #262626;
   position: relative;
   top: 0px;
   right: 0px;
@@ -167,6 +166,8 @@ div#sidebar
   padding: 3px;
   width: 140px;
   min-height: 140px;
+
+  background-color: #262626;
 
   border:0px;
   border-radius:8px;
@@ -181,23 +182,70 @@ img#jjm
   margin: 5px 5px 5px 5px;
   }
 
-div#sidebar2
+
+div#sidebar2_title_area
   {
   float: left;
+  position: relative;
+
+  margin: 0px auto 0px 8px;
+  padding: 8px 8px 2px 8px;
+  width: 130px;
+  height: 15px;
+
   background-color: white;
+
+  border:0px;
+  border-top-left-radius:8px;
+  -moz-border-radius-topleft:8px; /* Firefox 3.6 and earlier */
+  -webkit-border-top-left-radius:8px; /* Safari */
+  border-top-right-radius:8px;
+  -moz-border-radius-topright:8px; /* Firefox 3.6 and earlier */
+  -webkit-border-top-right-radius:8px; /* Safari */
+  border-bottom-right-radius:0px;
+  -moz-border-radius-bottomright:0px; /* Firefox 3.6 and earlier */
+  -webkit-border-bottom-right-radius:0px; /* Safari */
+  border-bottom-left-radius:0px;
+  -moz-border-radius-bottomleft:0px; /* Firefox 3.6 and earlier */
+  -webkit-border-bottom-left-radius:0px; /* Safari */
+  }
+
+span#sidebar2_title
+  {
+  font: 14px "Helvetica", Lucida Grande, Arial, Sans-Serif; 
+  font-weight: 600;
+  color: #262626; 
+  }
+
+
+div#sidebar2_body
+  {
+  float: left;
   position: relative;
   top: 0px;
   right: 0px;
   margin: 0px auto 8px 8px;
-  padding: 3px;
-  width: 140px;
-  min-height: 120px;
+  padding: 8px;
+  width: 130px;
+  min-height: 110px;
+
+  background-color: white;
 
   border:0px;
-  border-radius:8px;
-  -moz-border-radius:8px; /* Firefox 3.6 and earlier */
-  -webkit-border-radius:8px; /* Safari */
+  border-top-left-radius:0px;
+  -moz-border-radius-topleft:0px; /* Firefox 3.6 and earlier */
+  -webkit-border-top-left-radius:0px; /* Safari */
+  border-top-right-radius:0px;
+  -moz-border-radius-topright:0px; /* Firefox 3.6 and earlier */
+  -webkit-border-top-right-radius:0px; /* Safari */
+  border-bottom-right-radius:8px;
+  -moz-border-radius-bottomright:8px; /* Firefox 3.6 and earlier */
+  -webkit-border-bottom-right-radius:8px; /* Safari */
+  border-bottom-left-radius:8px;
+  -moz-border-radius-bottomleft:8px; /* Firefox 3.6 and earlier */
+  -webkit-border-bottom-left-radius:8px; /* Safari */
   }
+
 
 div#footer_wrap
   {
@@ -214,7 +262,7 @@ div#footer
   opacity: .82;
   filter:alpha(opacity=82);
   position: relative;
-  top: 10px;
+  top: 15px;
   margin: 0px auto 12px auto;
   width: 474px;
   height: 50px;

@@ -61,8 +61,19 @@
     <%= yield :sidebar %>
   </div>
 
-  <div id='sidebar2'> March 3, 2011<br> Using ruby mixins for dependency injection.  </div>
+  <div id='sidebar2_title_area'> 
+    <span id='sidebar2_title'>
+      <b>Blogroll</b>
+    </span>
   </div>
+  <div id='sidebar2_body'> 
+    <% @posts.each do |p| %>
+      <%= link_to p.title, post_path(p) %>
+    <% end %>
+  </div>
+
+
+  </div> /*end main*/
   
 
   <!--FOOTER --------------------------------------------->
