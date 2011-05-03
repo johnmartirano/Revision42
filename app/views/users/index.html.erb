@@ -1,17 +1,17 @@
-<% content_for :head do %>
+<%= content_for :head do %>
 <% end %>
 
 
-<% content_for :page_title do %>
+<%= content_for :page_title do %>
   user administration
 <% end %>
 
 
-<% content_for :page_subtitle do %>
+<%= content_for :page_subtitle do %>
 <% end %>
 
 
-<% content_for :page_body do %>
+<%= content_for :page_body do %>
   
   <h1> Users </h1>
 
@@ -24,7 +24,7 @@
       <th></th>
     </tr>
   
-  <% @users.each do |user| %>
+  <%= @users.each do |user| %>
     <tr>
       <td><%= user.username %></td>
       <td><%= user.email %></td>
@@ -42,5 +42,5 @@
 <% end %>
 
 
-<% content_for :sidebar do %>
+<%= content_for :sidebar do %>
 <% end %>

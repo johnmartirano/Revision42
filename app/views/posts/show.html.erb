@@ -1,18 +1,18 @@
-<% content_for :head do %>
+<%= content_for :head do %>
 <% end %>
 
 
-<% content_for :page_title do %>
+<%= content_for :page_title do %>
   <%= @post.title %>
 <% end %>
 
 
-<% content_for :page_subtitle do %>
+<%= content_for :page_subtitle do %>
   -- published on <%= @post.created_at %> by <%= @username %>
 <% end %>
 
 
-<% content_for :page_body do %>
+<%= content_for :page_body do %>
   <span id="page_notice"><%= notice %></span>
 
   <%= @post.content.html_safe %>
@@ -24,7 +24,7 @@
 <% end %>
 
 
-<% content_for :sidebar do %>
+<%= content_for :sidebar do %>
 <% end %>
 
 
