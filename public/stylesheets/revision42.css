@@ -136,9 +136,9 @@ span#page_subtitle
 div#page_body
   {
   background-color: white;
-  width: 474px;
+  width: 464px;
   min-height: 350px;
-  padding: 5px;
+  padding: 10px;
 
   border:0px;
   border-top-left-radius:0px;
@@ -153,6 +153,28 @@ div#page_body
   border-bottom-left-radius:8px;
   -moz-border-radius-bottomleft:8px; /* Firefox 3.6 and earlier */
   -webkit-border-bottom-left-radius:8px; /* Safari */
+
+  font: 11px "Lucida Grande", Helvetica, Arial, Sans-Serif; 
+  font-weight: 200;
+  color: black; 
+  }
+
+span#page_notice { color: green; }
+
+div#page_body p { padding: 5px 5px 5px 0px; }
+div#page_body h1 
+  {
+  padding: 5px 5px 1px 0px; 
+  font: 14px "Lucida Grande", Helvetica, Arial, Sans-Serif; 
+  font-weight: bold;
+  color: black; 
+  }
+div#page_body h2 
+  {
+  padding: 5px 5px 1px 0px; 
+  font: 12px "Lucida Grande", Helvetica, Arial, Sans-Serif; 
+  font-weight: bold;
+  color: black; 
   }
 
 

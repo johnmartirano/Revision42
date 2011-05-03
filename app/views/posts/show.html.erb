@@ -13,11 +13,9 @@
 
 
 <% content_for :page_body do %>
-  <p id="notice"><%= notice %></p>
+  <span id="page_notice"><%= notice %></span>
 
-  <p>
-    <%= @post.content.html_safe %>
-  </p>
+  <%= @post.content.html_safe %>
   <br>
   
   <%= link_to 'Edit', edit_post_path(@post) %> |

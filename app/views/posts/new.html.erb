@@ -3,8 +3,12 @@
 
 <% content_for :page_body do %>
   <h1>New post</h1>
+
+  <p>
   <%= render 'form' %>
   <%= link_to 'Back', posts_path %>
+  </p>
+
 <% end %>
 
 <% content_for :sidebar do %>
